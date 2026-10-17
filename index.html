@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScoreEngine — music written to the picture</title>
+  <meta name="description" content="ScoreEngine scores a trailer or pitch reel to the picture. The finished score is delivered to the production.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --gold: #e8c354;
+      --gold-btn: #f5d565;
+      --ink: #111111;
+      --white: #ffffff;
+      --muted: rgba(255,255,255,0.82);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: Poppins, sans-serif;
+    }
+    a { color: inherit; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 28px;
+      background: #000;
+    }
+    .mark {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .mark-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--gold);
+      color: #111;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 32px;
+      line-height: 42px;
+      text-align: center;
+    }
+    .mark-name {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.04em;
+      color: var(--gold);
+      line-height: 0.9;
+    }
+    .mark-name span { display: block; }
+    nav { display: flex; align-items: center; gap: 22px; }
+    nav a.login {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--gold-btn);
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      padding: 12px 22px;
+      border-radius: 12px;
+    }
+    .hero {
+      min-height: calc(100vh - 78px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 72px 24px 88px;
+      background:
+        radial-gradient(900px 420px at 50% 110%, rgba(232, 195, 84, 0.28), transparent 60%),
+        radial-gradient(700px 380px at 50% 20%, rgba(40, 70, 140, 0.35), transparent 70%),
+        linear-gradient(180deg, #050505 0%, #0b1020 42%, #120c08 100%);
+    }
+    .hero-inner { max-width: 760px; }
+    .lede {
+      margin: 0 auto;
+      max-width: 640px;
+      font-size: 18px;
+      line-height: 1.65;
+      font-weight: 400;
+      color: var(--muted);
+    }
+    h1 {
+      margin: 36px 0 28px;
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 400;
+      font-size: clamp(48px, 7vw, 72px);
+      letter-spacing: 0.02em;
+      line-height: 0.92;
+      color: var(--gold);
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 980px;
+      margin: -28px auto 0;
+      padding: 0 24px 80px;
+    }
+    .step h2 {
+      margin: 0 0 8px;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 32px;
+      letter-spacing: 0.04em;
+      color: var(--gold);
+      font-weight: 400;
+    }
+    .step p { margin: 0; color: var(--muted); line-height: 1.5; font-size: 15px; }
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 28px 32px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.55);
+      font-size: 14px;
+    }
+    .people { display: flex; gap: 28px; flex-wrap: wrap; }
+    .people a { color: var(--gold); text-decoration: none; display: block; }
+    .people strong { color: #fff; font-weight: 500; }
+    @media (max-width: 800px) {
+      header { padding: 14px 16px; }
+      nav a.login { display: none; }
+      .steps { grid-template-columns: 1fr; padding-bottom: 48px; }
+      footer { flex-direction: column; }
+      .lede { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="mark" href="/">
+      <span class="mark-badge">S</span>
+      <span class="mark-name"><span>Score</span><span>Engine</span></span>
+    </a>
+    <nav>
+      <a class="btn" href="mailto:scrimshawlicious@gmail.com,dpli2000@yahoo.com?subject=ScoreEngine">Start a score</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="lede">Send a trailer or a pitch reel. ScoreEngine writes the score to that picture, and the finished music goes to the production.</p>
+      <h1>MUSIC WRITTEN<br>TO THE CUT</h1>
+      <a class="btn" href="mailto:scrimshawlicious@gmail.com,dpli2000@yahoo.com?subject=ScoreEngine">Start a score</a>
+    </div>
+  </section>
+
+  <section class="steps">
+    <article class="step">
+      <h2>01 PICTURE</h2>
+      <p>A trailer or pitch reel. The cut is the brief.</p>
+    </article>
+    <article class="step">
+      <h2>02 SCORE</h2>
+      <p>Music placed on the picture: the hits, the holds, and the last frame.</p>
+    </article>
+    <article class="step">
+      <h2>03 DELIVERY</h2>
+      <p>The finished score is delivered to that production.</p>
+    </article>
+  </section>
+
+  <footer>
+    <div>ScoreEngine · a Techbunny project</div>
+    <div class="people">
+      <div><strong>Nick Helgesen</strong><a href="mailto:scrimshawlicious@gmail.com">scrimshawlicious@gmail.com</a></div>
+      <div><strong>Dapeng Li</strong><a href="mailto:dpli2000@yahoo.com">dpli2000@yahoo.com</a></div>
+    </div>
+  </footer>
+</body>
+</html>
